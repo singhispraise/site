@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sing His Praise</title>
-  <meta name="description" content="Sing His Praise is a private worship network for worship leaders, musicians, and ministry builders growing in craft, care, and community." />
+  <meta name="description" content="Sing His Praise is a worship community connecting and equipping worship leaders and musicians serving in local churches." />
   <meta property="og:title" content="Sing His Praise" />
   <meta property="og:description" content="A worship community for shared resources, collective wisdom, authentic fellowship, and faithful service in the local church." />
   <meta property="og:type" content="website" />
@@ -26,7 +26,7 @@
       --color-primary:#5b3928;--color-primary-hover:#45291c;--color-primary-highlight:#ead9cc;--color-secondary:#7f6c44;
       --shadow-sm:0 1px 2px rgba(29,20,14,.08);--shadow-md:0 12px 32px rgba(29,20,14,.10);--shadow-lg:0 28px 64px rgba(29,20,14,.14);
       --radius-sm:.375rem;--radius-md:.75rem;--radius-lg:1.25rem;--radius-xl:2rem;--radius-full:9999px;
-      --content-narrow:720px;--content-default:1120px;--content-wide:1280px;
+      --content-default:1120px;
       --font-display:'Instrument Serif',Georgia,serif;--font-body:'Work Sans','Helvetica Neue',Arial,sans-serif;
       --transition-interactive:180ms cubic-bezier(.16,1,.3,1);
     }
@@ -40,21 +40,21 @@
     html{-webkit-font-smoothing:antialiased;text-size-adjust:none;scroll-behavior:smooth;scroll-padding-top:5rem}
     body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:var(--color-bg);color:var(--color-text)}
     img,svg{display:block;max-width:100%;height:auto}
-    a,button,input,select{transition:color var(--transition-interactive),background var(--transition-interactive),border-color var(--transition-interactive),box-shadow var(--transition-interactive)}
-    a{text-decoration:none;color:inherit} button{border:none;background:none;cursor:pointer}
+    a,button,input,select,textarea{transition:color var(--transition-interactive),background var(--transition-interactive),border-color var(--transition-interactive),box-shadow var(--transition-interactive)}
+    a{text-decoration:none;color:inherit}
+    button{border:none;background:none;cursor:pointer}
     input,select,textarea{font:inherit;color:inherit}
     :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
-    .skip-link{position:absolute;left:-9999px}.skip-link:focus{left:1rem;top:1rem;z-index:999;background:var(--color-surface);padding:.8rem 1rem;border-radius:var(--radius-md)}
+    .skip-link{position:absolute;left:-9999px}
+    .skip-link:focus{left:1rem;top:1rem;z-index:999;background:var(--color-surface);padding:.8rem 1rem;border-radius:var(--radius-md)}
     .container{width:min(calc(100% - 2rem),var(--content-default));margin-inline:auto}
-    .wide{width:min(calc(100% - 2rem),var(--content-wide));margin-inline:auto}
     .eyebrow{font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-text-muted)}
-    h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.03;text-wrap:balance}
+    h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.03;text-wrap:balance}
     p,li{max-width:72ch;text-wrap:pretty}
     .site-header{position:sticky;top:0;z-index:70;background:color-mix(in srgb,var(--color-bg) 86%, transparent);backdrop-filter:blur(16px);border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
     .header-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-4) 0}
     .brand{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);font-weight:600;letter-spacing:.02em}
     .brand-mark{width:44px;height:44px;padding:8px;border-radius:50%;background:var(--color-primary-highlight);color:var(--color-primary)}
-    .header-shell{display:flex;align-items:center;gap:var(--space-4)}
     nav ul{list-style:none;display:flex;gap:var(--space-4);flex-wrap:wrap}
     nav a{font-size:var(--text-sm);color:var(--color-text-muted)}
     nav a:hover,nav a:focus-visible{color:var(--color-text)}
@@ -67,12 +67,13 @@
     .btn-secondary{border:1px solid color-mix(in srgb,var(--color-text) 12%, transparent);background:transparent;color:var(--color-text)}
     .btn-ghost{color:var(--color-text-muted)}
     .hero{padding:clamp(var(--space-12),10vw,var(--space-24)) 0 var(--space-20)}
-    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:var(--space-10);align-items:end}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:var(--space-10);align-items:center}
     h1{font-size:var(--text-3xl);max-width:10.5ch}
     .hero-copy p{margin-top:var(--space-5);color:var(--color-text-muted)}
     .cta-row{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-6)}
     .hero-composition{display:grid;gap:var(--space-4)}
-    .hero-panel{background:linear-gradient(180deg,var(--color-surface),var(--color-surface-2));border:1px solid color-mix(in srgb,var(--color-text) 9%, transparent);border-radius:var(--radius-xl);padding:var(--space-8);box-shadow:var(--shadow-lg)}
+    .hero-panel,.card{background:linear-gradient(180deg,var(--color-surface),var(--color-surface-2));border:1px solid color-mix(in srgb,var(--color-text) 9%, transparent);border-radius:var(--radius-xl);padding:var(--space-8);box-shadow:var(--shadow-md)}
+    .card{background:var(--color-surface);box-shadow:var(--shadow-sm);border-radius:var(--radius-lg);padding:var(--space-6)}
     .hero-panel h2{font-size:var(--text-xl);margin-top:var(--space-3)}
     .stats-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-3);margin-top:var(--space-6)}
     .stat{padding:var(--space-4);background:var(--color-bg);border-radius:var(--radius-lg);border:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
@@ -80,48 +81,18 @@
     main section{padding:clamp(var(--space-12),8vw,var(--space-24)) 0;border-top:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
     .section-head{display:grid;grid-template-columns:.78fr 1.22fr;gap:var(--space-8);align-items:start;margin-bottom:var(--space-8)}
     .section-head h2{font-size:var(--text-2xl)}
-    .section-head p{color:var(--color-text-muted)}
-    .pillars,.site-map,.resource-grid,.leaders-grid,.path-grid,.event-grid{display:grid;gap:var(--space-5)}
-    .pillars{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .site-map{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .resource-grid{grid-template-columns:1.05fr .95fr .95fr}
-    .leaders-grid,.event-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .path-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .card{background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);border-radius:var(--radius-lg);padding:var(--space-6);box-shadow:var(--shadow-sm)}
+    .section-head p,.card p{color:var(--color-text-muted)}
+    .pillars,.event-grid{display:grid;gap:var(--space-5)}
+    .pillars{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .event-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     .card h3{font-size:var(--text-lg);margin-bottom:var(--space-3)}
-    .card h4{font-size:var(--text-xl);margin-bottom:var(--space-3)}
-    .card p{color:var(--color-text-muted)}
-    .card ul{list-style:none;display:grid;gap:var(--space-2);margin-top:var(--space-4);color:var(--color-text-muted);font-size:var(--text-sm)}
-    .card li::before{content:'— ';color:var(--color-secondary)}
-    .member-home{background:var(--color-surface-2);border-radius:calc(var(--radius-xl) + .5rem);padding:var(--space-6);border:1px solid color-mix(in srgb,var(--color-text) 9%, transparent);box-shadow:var(--shadow-md)}
-    .member-grid{display:grid;grid-template-columns:280px 1fr;gap:var(--space-6)}
-    .sidebar{background:var(--color-surface);border-radius:var(--radius-xl);padding:var(--space-5);border:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
-    .sidebar ul{list-style:none;display:grid;gap:var(--space-2);margin-top:var(--space-5)}
-    .sidebar a{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1rem;border-radius:var(--radius-md);color:var(--color-text-muted);background:transparent}
-    .sidebar a.active,.sidebar a:hover{background:var(--color-primary-highlight);color:var(--color-primary)}
-    .member-main{display:grid;gap:var(--space-5)}
-    .dashboard-top{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--space-5)}
-    .module-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5)}
-    .chip{display:inline-flex;align-items:center;padding:.4rem .7rem;border-radius:999px;background:var(--color-primary-highlight);color:var(--color-primary);font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase}
-    .checklist{display:grid;gap:var(--space-3);margin-top:var(--space-4)}
-    .check{display:flex;gap:var(--space-3);align-items:flex-start;padding-bottom:var(--space-3);border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
-    .check strong{display:inline-flex;align-items:center;justify-content:center;flex:0 0 28px;height:28px;border-radius:50%;background:var(--color-primary-highlight);color:var(--color-primary);font-size:var(--text-xs)}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)}
-    .quote-block{background:var(--color-primary);color:var(--color-text-inverse);border-radius:var(--radius-xl);padding:var(--space-8)}
-    .quote-block p{font-size:var(--text-lg);max-width:28ch}
-    .calendar-item{padding:var(--space-4) 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
-    .calendar-item:last-child{border-bottom:none;padding-bottom:0}
-    .calendar-item time{display:block;font-size:var(--text-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--color-text-faint);margin-bottom:var(--space-2)}
     .footer-cta{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);align-items:start}
-    form .field{display:grid;gap:.35rem}
+    .field{display:grid;gap:.35rem}
     form input,form select,form textarea{width:100%;padding:.95rem 1rem;border-radius:var(--radius-md);border:1px solid color-mix(in srgb,var(--color-text) 12%, transparent);background:var(--color-surface-2)}
     textarea{min-height:120px;resize:vertical}
     footer{padding:var(--space-10) 0 var(--space-12)}
     .footer-bar{display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding-top:var(--space-6);border-top:1px solid color-mix(in srgb,var(--color-text) 8%, transparent);color:var(--color-text-muted)}
-    @media (max-width:1024px){
-      .hero-grid,.section-head,.dashboard-top,.footer-cta,.two-col,.pillars,.site-map,.resource-grid,.leaders-grid,.path-grid,.event-grid,.module-grid,.member-grid{grid-template-columns:1fr}
-      .member-home{padding:var(--space-4)}
-    }
+    @media (max-width:1024px){.hero-grid,.section-head,.footer-cta,.pillars,.event-grid,.stats-grid{grid-template-columns:1fr}}
     @media (max-width:900px){
       nav{display:none;position:absolute;left:1rem;right:1rem;top:calc(100% + .5rem);background:var(--color-surface);padding:var(--space-4);border-radius:var(--radius-lg);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);box-shadow:var(--shadow-md)}
       nav.open{display:block}
@@ -129,7 +100,6 @@
       .menu-toggle{display:inline-flex}
       .header-actions .desktop-only{display:none}
       h1{max-width:11.5ch}
-      .stats-grid{grid-template-columns:1fr}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,:before,:after{transition:none!important}}
   </style>
@@ -138,28 +108,23 @@
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="header-shell">
-        <a href="#top" class="brand" aria-label="Sing His Praise home">
-          <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M11 27.5C11 18.9396 17.9396 12 26.5 12H37" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-            <path d="M37 12C30.3726 12 25 17.3726 25 24C25 30.6274 30.3726 36 37 36" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-            <path d="M14 36H34" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-          </svg>
-          <span>Sing His Praise</span>
-        </a>
-      </div>
+      <a href="#top" class="brand" aria-label="Sing His Praise home">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M11 27.5C11 18.9396 17.9396 12 26.5 12H37" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M37 12C30.3726 12 25 17.3726 25 24C25 30.6274 30.3726 36 37 36" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M14 36H34" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+        <span>Sing His Praise</span>
+      </a>
       <nav id="site-nav" aria-label="Primary navigation">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#pathways">Pathways</a></li>
-          <li><a href="#start-here">Start Here</a></li>
-          <li><a href="#member-home">Member Home</a></li>
           <li><a href="#events">Events</a></li>
-          <li><a href="#join">Apply</a></li>
+          <li><a href="#join">Join</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <a class="btn btn-secondary desktop-only" href="#member-home">View portal</a>
+        <a class="btn btn-secondary desktop-only" href="#join">Join now</a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
         <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -172,30 +137,17 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Membership-based worship network</p>
-          <h1>Connecting and equipping worship leaders and musicians serving in local churches.</h1>
-          <p>Sing His Praise exists to create a network of worship team leaders and members who can help strengthen the wider body of Christ. Its heart is to serve church plants, smaller churches, and other places of need where there may be real desire, but not always the resources, systems, or support needed to build a healthy and skillful worship team.</p>
+          <p class="eyebrow">Worship leaders network</p>
+          <h1>SING HIS PRAISE</h1>
+          <p>We exist to connect and equip worship leaders and musicians serving in local churches. Through shared resources, collective wisdom, and authentic fellowship, we encourage one another to grow in skill, character, and faithfulness while serving the Church and leading His people in worship that glorifies Him.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#join">Apply for membership</a>
-            <a class="btn btn-secondary" href="#start-here">See the first 30 days</a>
+            <a class="btn btn-primary" href="#join">Join Sing His Praise</a>
+            <a class="btn btn-secondary" href="#events">View events</a>
           </div>
         </div>
-        <div class="hero-composition">
-          <article class="hero-panel">
-            <p class="eyebrow">Core structure</p>
-            <h2>Website as home base. Community as daily rhythm.</h2>
-            <p style="margin-top:1rem;color:var(--color-text-muted)">The public side should clearly communicate the vision, values, and invitation of Sing His Praise. The member side should guide people into teaching, community, practical training, and shared rhythms that help worship leaders and musicians grow in faithfulness and effectiveness in their local churches.</p>
-            <div class="stats-grid">
-              <div class="stat"><strong>6</strong><span>primary member lanes</span></div>
-              <div class="stat"><strong>30</strong><span>days of guided onboarding</span></div>
-              <div class="stat"><strong>1</strong><span>clear next step per screen</span></div>
-            </div>
-          </article>
-          <article class="card">
-            <p class="eyebrow">Launch posture</p>
-            <h3>Shared resources. Collective wisdom. Authentic fellowship.</h3>
-            <p>Sing His Praise is designed to help people who may be carrying a lot with limited support. The goal is not to impress with scale, but to strengthen teams with wisdom, training, prayer, and practical connection.</p>
-          </article>
+        <div class="hero-media">
+          <img src="GCC-PT-Picture.jpg" alt="Worship team leading a congregation from the stage during a church gathering." width="1389" height="780" loading="eager" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-xl);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);box-shadow:var(--shadow-lg);aspect-ratio:16/9;" />
+        </div>
         </div>
       </div>
     </section>
@@ -205,11 +157,11 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">About Sing His Praise</p>
-            <h2>Why Sing His Praise exists and who it is meant to serve.</h2>
+            <h2>Why Sing His Praise exists and what shapes this community.</h2>
           </div>
-          <p>Sing His Praise exists to strengthen the people who help shape worship in the local church, especially in communities where the need is great and the resources are limited. It was formed out of a desire to build something more thoughtful than a content vault and more grounded than a loose online chat space: a place where worship leaders, musicians, and ministry builders can grow in formation, craft, friendship, and service together.</p>
+          <p>Sing His Praise exists to connect and equip worship leaders and musicians serving in local churches. It is built around the belief that worship leaders and team members grow stronger when they have access to shared resources, collective wisdom, biblical encouragement, and authentic fellowship with others carrying similar responsibility.</p>
         </div>
-        <div class="pillars" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+        <div class="pillars">
           <article class="card"><h3>Christ-Centered Worship</h3><p>We exist first and foremost to glorify Jesus Christ. Worship is not performance or preference, but a response to who God is and what He has done.</p></article>
           <article class="card"><h3>Kingdom Mindset</h3><p>We set our minds on things above and labor with a kingdom perspective, remembering that our service is ultimately for Christ and for the good of His Church.</p></article>
           <article class="card"><h3>Biblical Foundation</h3><p>Our practices, language, and theology of worship are rooted in Scripture and shaped by God’s Word, not by trends, personality, or preference.</p></article>
@@ -217,231 +169,7 @@
           <article class="card"><h3>Growth</h3><p>We want to keep learning. As worship leaders and musicians, we pursue growth in skill, understanding, maturity, and the wisdom needed to serve well.</p></article>
           <article class="card"><h3>Next Generation</h3><p>We invest in and encourage upcoming worship leaders and musicians, helping them grow in confidence, calling, and capability for the years ahead.</p></article>
           <article class="card"><h3>Excellence</h3><p>We desire to offer our best to God. Excellence is not perfectionism, but faithful stewardship of the gifts, opportunities, and responsibilities He has given us.</p></article>
-          <article class="card"><h3>Go</h3><p>We want our worship and our lives to serve the mission of God. As we grow, we also go—carrying the gospel, strengthening the Church, and serving where there is need.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="pathways">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Recommended site map</p>
-            <h2>A structure that helps people understand the vision and take the next step.</h2>
-          </div>
-          <p>The site should make the mission easy to understand and the next steps easy to take. People should quickly see what Sing His Praise is, who it is for, and how it can help worship teams in church plants, smaller churches, and other places of need move toward greater health and quality.</p>
-        </div>
-        <div class="site-map">
-          <article class="card">
-            <h3>Vision and overview</h3>
-            <ul>
-              <li>Home</li>
-              <li>About / vision</li>
-              <li>Membership overview</li>
-              <li>Events & seminars</li>
-              <li>Apply / contact</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Start Here</h3>
-            <ul>
-              <li>Welcome page</li>
-              <li>Start Here checklist</li>
-              <li>Culture & expectations</li>
-              <li>How the community layer works</li>
-              <li>First-month milestones</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Resource library</h3>
-            <ul>
-              <li>Worship topics</li>
-              <li>Tutorials</li>
-              <li>Leadership and team health</li>
-              <li>Featured series</li>
-              <li>Downloads and notes</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Community pathways</h3>
-            <ul>
-              <li>Electric guitar</li>
-              <li>Keys</li>
-              <li>Vocals</li>
-              <li>Bass</li>
-              <li>MD and sound</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Leadership & development</h3>
-            <ul>
-              <li>Point-person roles</li>
-              <li>Christ-centered worship</li>
-              <li>Care escalation</li>
-              <li>Prayer rhythms</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Mission in action</h3>
-            <ul>
-              <li>Prayer and encouragement board</li>
-              <li>Gatherings</li>
-              <li>Prayer requests and support</li>
-              <li>Opportunities to serve and strengthen others</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="start-here">
-      <div class="container two-col">
-        <div>
-          <p class="eyebrow">Start Here</p>
-          <h2>The first month should feel grounded, clear, and encouraging.</h2>
-          <p>Welcome to Sing His Praise. This is your first step into the life of the network. Rather than handing you everything at once, this page is meant to help you get oriented, understand the culture, and take a few meaningful first steps.</p>
-          <div class="checklist">
-            <div class="check"><strong>1</strong><div><h3>Welcome message</h3><p>Sing His Praise was built to serve people who are carrying real responsibility in worship ministry. Whether you lead a team, serve as a musician, help shape rehearsal culture, or support the technical side of worship, this space exists to strengthen you spiritually, practically, and relationally.</p></div></div>
-            <div class="check"><strong>2</strong><div><h3>Find your lane</h3><p>Read the vision, complete your profile, and identify your primary role so Sing His Praise can guide you toward the most relevant spaces and resources.</p></div></div>
-            <div class="check"><strong>3</strong><div><h3>Begin to participate</h3><p>Introduce yourself in the right space, engage one teaching resource, and take one meaningful step into the life of the community.</p></div></div>
-            <div class="check"><strong>4</strong><div><h3>Build a sustainable rhythm</h3><p>By the end of the first month, the goal is simple: begin a healthy rhythm of learning, community, encouragement, and faithful service in your local church.</p></div></div>
-          </div>
-        </div>
-        <aside class="quote-block">
-          <p>“One welcome email is not a strategy. The first month should move people from curiosity to confidence.”</p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="member-home">
-      <div class="wide">
-        <div class="section-head" style="margin-bottom:var(--space-6)">
-          <div>
-            <p class="eyebrow">Member portal mockup</p>
-            <h2>A member home built around encouragement, growth, and service.</h2>
-          </div>
-          <p>This section shows how the member home can function as a real ministry dashboard: vision, teaching, current rhythms, resource access, prayer, and practical next steps are organized so members can move from inspiration into faithful action.</p>
-        </div>
-        <div class="member-home">
-          <div class="member-grid">
-            <aside class="sidebar" aria-label="Member navigation">
-              <p class="eyebrow">Member home</p>
-              <ul>
-                <li><a href="#member-home" class="active"><span>Dashboard</span><span>•</span></a></li>
-                <li><a href="#library"><span>Teaching library</span><span>12</span></a></li>
-                <li><a href="#community"><span>Community channels</span><span>6</span></a></li>
-                <li><a href="#leaders"><span>Leadership & care</span><span>4</span></a></li>
-                <li><a href="#events"><span>Events</span><span>3</span></a></li>
-              </ul>
-            </aside>
-            <div class="member-main">
-              <div class="dashboard-top">
-                <article class="card">
-                  <span class="chip">This week</span>
-                  <h3 style="margin-top:var(--space-4)">Your next steps</h3>
-                  <div class="checklist">
-                    <div class="check"><strong>1</strong><div><p>Finish the welcome video and read the Sing His Praise vision and values.</p></div></div>
-                    <div class="check"><strong>2</strong><div><p>Join your primary instrument or role pathway and introduce yourself to the community.</p></div></div>
-                    <div class="check"><strong>3</strong><div><p>Watch one featured training and register for the next live gathering or roundtable.</p></div></div>
-                  </div>
-                </article>
-                <article class="card">
-                  <p class="eyebrow">Current rhythm</p>
-                  <h3>Member snapshot</h3>
-                  <ul>
-                    <li>Featured teaching: Christ-centered worship in the life of the local church</li>
-                    <li>Prayer focus: faithfulness, humility, unity, and fresh strength for local church worship teams</li>
-                    <li>Upcoming call: worship leaders encouragement roundtable</li>
-                    <li>Open need: an opportunity to encourage and support a growing local church team</li>
-                  </ul>
-                </article>
-              </div>
-              <div class="module-grid">
-                <article class="card" id="library">
-                  <p class="eyebrow">Library</p>
-                  <h3>Growth pathways</h3>
-                  <ul>
-                    <li>Christ-centered worship</li>
-                    <li>Biblical foundation</li>
-                    <li>Growth in craft and skill</li>
-                    <li>Leadership and team health</li>
-                    <li>Next generation development</li>
-                  </ul>
-                </article>
-                <article class="card" id="community">
-                  <p class="eyebrow">Community</p>
-                  <h3>Community pathways</h3>
-                  <ul>
-                    <li>Electric guitar</li>
-                    <li>Keys</li>
-                    <li>Vocals</li>
-                    <li>Bass</li>
-                    <li>MD</li>
-                    <li>Sound</li>
-                  </ul>
-                </article>
-                <article class="card" id="leaders">
-                  <p class="eyebrow">Leadership</p>
-                  <h3>Leadership posture</h3>
-                  <ul>
-                    <li>Trusted leaders and facilitators</li>
-                    <li>Shared encouragement and guidance</li>
-                    <li>Clear values and healthy communication</li>
-                    <li>Support when members need prayer or care</li>
-                  </ul>
-                </article>
-                <article class="card">
-                  <p class="eyebrow">Needs board</p>
-                  <h3>Partnership requests</h3>
-                  <p>A space for prayer requests, opportunities to encourage one another, and practical ways to support worship leaders and teams across local churches.</p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Inner pages</p>
-            <h2>Key content areas that help the community grow.</h2>
-          </div>
-          <p>Membership onboarding guidance recommends welcome materials, module-style tours, handbooks, and roadmap-style resources, so these inner pages are designed to give Sing His Praise a real structure rather than a single long landing page.</p>
-        </div>
-        <div class="resource-grid">
-          <article class="card">
-            <h4>Vision and teaching page</h4>
-            <p>A home for teachings, seminar replays, notes, and curated resources that help members grow in worship, theology, character, and practical ministry leadership.</p>
-            <ul>
-              <li>Vision teachings and featured resources</li>
-              <li>Recent encouragements and teachings</li>
-              <li>Pillar-based categories</li>
-              <li>Study notes and practical tools</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h4>Community pathway page</h4>
-            <p>A practical guide for each instrument or role lane, including what the space is for, who it serves, and how members can encourage one another in both skill and faithfulness.</p>
-            <ul>
-              <li>Purpose of the channel</li>
-              <li>Lead introduction</li>
-              <li>What this community is for</li>
-              <li>Encouragement and growth tools</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h4>Core pillars page</h4>
-            <p>A dedicated page that explains the values shaping Sing His Praise so members understand the convictions, posture, and mission at the heart of the community.</p>
-            <ul>
-              <li>Christ-centered worship</li>
-              <li>Biblical foundation</li>
-              <li>Community and growth</li>
-              <li>Next generation, excellence, and go</li>
-            </ul>
-          </article>
+          <article class="card"><h3>Go</h3><p>We want our worship and our lives to serve the mission of God. As we grow, we also go, carrying the gospel, strengthening the Church, and serving where there is need.</p></article>
         </div>
       </div>
     </section>
@@ -451,25 +179,22 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">Gatherings</p>
-            <h2>Events should help people move from encouragement into action.</h2>
+            <h2>Upcoming events</h2>
           </div>
-          <p>Sing His Praise gatherings should create real moments for learning, encouragement, and connection. They are meant to help members not only consume resources, but build confidence, ask questions, and grow through shared experience with others who understand their context.</p>
+          <p>We want to provide gatherings that create real moments for learning, encouragement, and connection. The purpose is to help people not only receive resources, but also build confidence, ask honest questions, and grow through shared experience with others who understand their context.</p>
         </div>
         <div class="event-grid">
           <article class="card">
-            <time>May 28</time>
             <h3>New member welcome call</h3>
-            <p>A live orientation for new members to meet leaders, ask questions, and understand how Sing His Praise can support their current church context.</p>
+            <p>A live orientation for new members to meet leaders, hear the vision, ask questions, and understand how Sing His Praise can support their church context.</p>
           </article>
           <article class="card">
-            <time>June 4</time>
             <h3>Worship leaders roundtable</h3>
             <p>A facilitated conversation around leading teams with health, humility, biblical grounding, and musical clarity in the life of the local church.</p>
           </article>
           <article class="card">
-            <time>June 15</time>
-            <h3>Seminar replay release</h3>
-            <p>A featured teaching release with notes, follow-up prompts, and conversation starters that help members apply what they are learning in real ministry settings.</p>
+            <h3>Featured training release</h3>
+            <p>A teaching release with notes, follow-up prompts, and conversation starters that help members apply what they are learning in real ministry settings.</p>
           </article>
         </div>
       </div>
@@ -478,11 +203,11 @@
     <section id="join">
       <div class="container footer-cta">
         <div>
-          <p class="eyebrow">Apply</p>
-          <h2>A simple next step into the community.</h2>
-          <p>The application should help Sing His Praise understand who a person is, where they serve, and what kind of support or growth they are looking for. It should feel thoughtful without becoming heavy, especially for leaders and team members who are already carrying a lot.</p>
+          <p class="eyebrow">Join</p>
+          <h2>Join Sing His Praise</h2>
+          <p>We would love to partner with you as we serve Christ and strengthen worship leaders and musicians together. Share your information below and someone will follow up with you.</p>
         </div>
-        <form class="card" aria-label="Membership application interest form">
+        <form class="card" aria-label="Join Sing His Praise form">
           <div class="field">
             <label for="name">Name</label>
             <input id="name" type="text" placeholder="Your name" />
@@ -509,8 +234,8 @@
             <textarea id="why" placeholder="Share a little about your church context, your role, and the kind of growth, support, or encouragement you are hoping for."></textarea>
           </div>
           <div class="cta-row" style="margin-top:1.25rem">
-            <button class="btn btn-primary" type="button">Submit interest</button>
-            <a class="btn btn-ghost" href="#about">Read the vision first</a>
+            <button class="btn btn-primary" type="button">Join now</button>
+            <a class="btn btn-ghost" href="#about">Learn more first</a>
           </div>
         </form>
       </div>
@@ -519,8 +244,7 @@
 
   <footer>
     <div class="container footer-bar">
-      <p>Sing His Praise — helping worship leaders and team members serve the body of Christ with greater depth, health, skill, and support.</p>
-      <p>Built around the vision of shared resources, collective wisdom, authentic fellowship, and worship that glorifies Jesus Christ.</p>
+      <p>Sing His Praise — connecting and equipping worship leaders and musicians for faithful service in the local church.</p>
     </div>
   </footer>
 
